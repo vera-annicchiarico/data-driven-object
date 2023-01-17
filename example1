@@ -1,0 +1,26 @@
+<body>
+  <div class="flex-container small-content">
+    <div class="container left-content">
+      <sas-report-object
+  	authenticationType="guest"
+  	url="https://viya4you.ita.sas.com"
+  	reportUri="/reports/reports/724f9791-60ad-4316-a929-b5345d931f23"
+  	objectName="ve1350"
+	></sas-report-object>
+    </div>
+    <div class="container right-content">
+      <div id="data-driven-content" class="ddc-container"></div>
+    </div>
+  </div>
+</body>
+
+// Register the onMessage handler with the data-driven content object
+var ddcHandle = vaReportComponents.registerDataDrivenContent(
+  {
+    authenticationType: 'guest',
+    url: "https://viya4you.ita.sas.com",
+    reportUri: "/reports/reports/724f9791-60ad-4316-a929-b5345d931f23",
+    objectName: "ve1358"
+  },
+  handleDataMessage
+);
